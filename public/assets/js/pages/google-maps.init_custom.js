@@ -6,17 +6,46 @@ Contact: support@coderthemes.com
 File: Google maps init js
 */
 
+// var connection = mysql.createConnection({
+//   host: '172.30.1.17',
+//   user: 'bssoft',
+//   password: '1q2w3e',
+//   database:'control'
+//   });
+
 !function ($) {
   "use strict";
 
   var GoogleMap = function () { };
 
   GoogleMap.prototype.bsTest = function ($container) {
-    return new GMaps({
+    var map = new GMaps({
       div: $container,
-      lat: -12.04379473663606, 
-      lng: -77.0213377990748
+      lat: 35.222682565536736, 
+      lng: 126.84929581118142
     });
+    map.setContextMenu({
+      control: 'map',
+      options: [{
+        title: '비상벨 설치장소 추가',
+        name: 'add_site',
+        action: function (e) {
+          this.addMarker({
+            lat: e.latLng.lat(),
+            lng: e.latLng.lng(),
+            title: '비상벨'
+          });          
+          this.hideContextMenu();
+        }
+      }/* , {
+        title: 'Center here',
+        name: 'center_here',
+        action: function (e) {
+          this.setCenter(e.latLng.lat(), e.latLng.lng());
+        }
+      } */]
+    });
+    return map;
   },
 
   //creates basic map
@@ -237,7 +266,7 @@ File: Google maps init js
       var $this = this;
       $(document).ready(function () {
         $this.bsTest('#gmaps-bsTest'),
-
+        
         //creating basic map
         $this.createBasic('#gmaps-basic'),
           //with sample markers

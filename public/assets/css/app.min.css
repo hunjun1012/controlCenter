@@ -2572,7 +2572,7 @@ body {
 }
 
 body.authentication-bg {
-  background-color: #6658dd;
+  background-color: black;
   background-size: cover;
   background-position: center;
 }
@@ -2596,7 +2596,7 @@ body.authentication-bg-pattern {
   background-size: cover;
 }
 .auth-fluid .auth-fluid-form-box {
-  max-width: 480px;
+  max-width: 800px;
   border-radius: 0;
   z-index: 2;
   padding: 3rem 2rem;

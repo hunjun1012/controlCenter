@@ -1,5 +1,5 @@
 <!-- Topbar Start -->
-<div class="navbar-custom">
+<div class="navbar-custom" style="background-color:#464646;">
     <div class="container-fluid">
         <ul class="list-unstyled topnav-menu float-right mb-0">
 
@@ -22,26 +22,26 @@
                 <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                     <img src="{{asset('assets/images/users/user-1.jpg')}}" alt="user-image" class="rounded-circle">
                     <span class="pro-user-name ml-1">
-                        {{auth()->user() ? auth()->user()->name : 'anonymous'}} <i class="mdi mdi-chevron-down"></i> 
+                        {{auth()->user() ? auth()->user()->name : '관리자'}} <i class="mdi mdi-chevron-down"></i> 
                     </span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
                     <!-- item-->
-                    <div class="dropdown-header noti-title">
+                    <!-- <div class="dropdown-header noti-title">
                         <h6 class="text-overflow m-0">환영합니다 !</h6>
-                    </div>
+                    </div> -->
     
                     <!-- item-->
-                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                    <!-- <a href="javascript:void(0);" class="dropdown-item notify-item">
                         <i class="fe-user"></i>
                         <span>마이페이지</span>
-                    </a>
+                    </a> -->
     
                     <!-- item-->
-                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                    <!-- <a href="javascript:void(0);" class="dropdown-item notify-item">
                         <i class="fe-settings"></i>
                         <span>내 설정</span>
-                    </a>
+                    </a> -->
     
                     <div class="dropdown-divider"></div>
     
@@ -79,26 +79,13 @@
     
         <!-- LOGO -->
         <div class="logo-box">
-            <a href="{{route('index')}}" class="logo logo-dark text-center">
-                <span class="logo-sm">
-                    <img src="{{asset('assets/images/logo-sm.png')}}"alt="" height="22">
-                    <!-- <span class="logo-lg-text-light">Scare</span> -->
-                </span>
-                <span class="logo-lg">
-                    <img src="{{asset('assets/images/logo-dark.png')}}"alt="" height="20">
-                    <!-- <span class="logo-lg-text-light">U</span> -->
-                </span>
-            </a>
+            
     
-            <a href="{{route('index')}}" class="logo logo-light text-center">
-                <span class="logo-sm">
-                    <img src="{{asset('assets/images/logo-sm.png')}}"alt="" height="22">
-                </span>
-                <span class="logo-lg">
-                    <img src="{{asset('assets/images/logo-light.png')}}"alt="" height="20">
-                </span>
+            <a href="{{route('dashboard.monitor')}}" class="logo logo-light text-center">
+                <b style="color:white; font-size:25px;">비상벨 관제센터</b>
             </a>
         </div>
+        
     
         <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
             <li>

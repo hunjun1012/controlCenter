@@ -1,4 +1,4 @@
-@extends('layouts.vertical', ['title' => '상담원 스트레스 상태'])
+@extends('layouts.vertical', ['title' => '상담원 체온 상태'])
 
 @section('css')
     <!-- Plugins css -->
@@ -48,7 +48,7 @@
                             </a> -->
                         </form>
                     </div>
-                    <h4 class="page-title">상담원 스트레스 현황</h4>
+                    <h4 class="page-title">상담원 체온 현황</h4>
                 </div>
             </div>
         </div>     
@@ -56,7 +56,7 @@
         <div class="row">
             <div class="col-md-12 col-xl-12">
                 <div class="card-box">
-                    <h4 class="header-title">[상담원] 스트레스 </h4>
+                    <h4 class="header-title">[상담원] 체온 </h4>
 
                     <div id="combine-chart" data-colors="#e3eaef,#f1556c,#1abc9c" class="flot-chart mt-5" style="height: 386px;">
                     </div>
@@ -69,10 +69,10 @@
             
              <div class="col-md-6 col-xl-3">
                 <div class="card-box">
-                    <h4 class="header-title mb-3">스트레스 등급</h4>
+                    <h4 class="header-title mb-3">체온 등급</h4>
 
                     <div class="widget-chart text-center" dir="ltr">
-                        <input data-plugin="knob" data-width="120" data-max="10" data-height="140" data-linecap=round data-bgColor="rgba(0,0,0,0.1)" data-fgColor="#f1556c" value="3" data-skin="tron" data-angleOffset="180" data-readOnly=true data-thickness=".12"/>
+                        <input data-plugin="knob" data-width="120" data-max="10" data-height="140" data-linecap=round data-bgColor="rgba(0,0,0,0.1)" data-fgColor="#f1556c" value="{{user->temp_grade}}" data-skin="tron" data-angleOffset="180" data-readOnly=true data-thickness=".12"/>
                         <h5 class="text-muted mt-3">0 ~ 10 단계 중 </h5>
                         <!-- <h2>Index 값 5</h2> -->
 
@@ -96,18 +96,18 @@
             </div> <!-- end col-->
             <div class="col-md-3 col-xl-3">
                 <div class="card-box">
-                    <h4 class="header-title mb-3">최근 스트레스 등급</h4>
+                    <h4 class="header-title mb-3">최근 체온 등급</h4>
 
                     <div id="roated-chart" style="height: 270px;" data-colors="#1abc9c,#4a81d4" dir="ltr"></div>
                 </div> <!-- end card-->
             </div> <!-- end col-->
 
             <div class="col-xl-6">
-                <!-- 스트레스 현황 카드 -->
+                <!-- 체온 현황 카드 -->
                 <div class="card">
                     <div class="card-body" dir="ltr">
                         <div id="cardCollpase3" class="collapse show">
-                            <h4 class="header-title mb-0">일별 스트레스 현황</h4>
+                            <h4 class="header-title mb-0">일별 체온 현황</h4>
                             <div id="statistics-chart" data-colors="#02c0ce" style="height: 270px;" class="morris-chart mt-3"></div>
 
                         </div> <!-- end collapse-->

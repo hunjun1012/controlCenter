@@ -1,4 +1,4 @@
-@extends('layouts.vertical', ['title' => '전체 현황'])
+@extends('layouts.vertical', ['title' => '비상벨 관제시스템'])
 
 @section('css')
     <!-- Plugins css -->
@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="page-title-box">
-                    <h4 class="page-title">전체현황</h4>
+                    <h4 class="page-title">모니터링</h4>
                     <!-- <div class="page-title-right">
                         <form class="form-inline">
                             <div class="form-group">
